@@ -24,7 +24,7 @@ class LoginController {
 	 */
 	def auth = {
 		if(session.user) {
-			redirect(controller:"website", action:"index")
+			redirect(controller:"home", action:"index")
 		}
 	}
 	
@@ -42,7 +42,7 @@ class LoginController {
 				if(params.targetParams) {
 					redirect(session.targetParams)
 				} else {
-					redirect(uri:'/website')
+					redirect(uri:'/home')
 				}
 			} else {
 				flash.message = '密码错误'
