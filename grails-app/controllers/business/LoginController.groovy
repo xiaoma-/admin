@@ -63,7 +63,7 @@ class LoginController {
 			if(user.save(flush:true)) {
 				session.user = user
 				session.setMaxInactiveInterval(new Integer(Config.findByCode('session.timeout')?.value?:300))
-				return redirect(uri:'/')
+				return redirect(uri:'/home')
 			}
 		} catch (Exception e) {
 			render(view:'register',params:params)
