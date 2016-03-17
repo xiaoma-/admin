@@ -1,13 +1,9 @@
 <!DOCTYPE html>
-<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
-<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
-<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
-<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"><!--<![endif]-->
+<html>
 	<head>
+	    <meta charset="UTF-8">
 		<meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
 		<title><g:layoutTitle default="管理后台"/></title>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="shortcut icon" href="${assetPath(src: 'favicon.ico')}" type="image/x-icon">
 		<link rel="apple-touch-icon" href="${assetPath(src: 'apple-touch-icon.png')}">
 		<link rel="apple-touch-icon" sizes="114x114" href="${assetPath(src: 'apple-touch-icon-retina.png')}">
@@ -22,8 +18,10 @@
         <asset:stylesheet src="AdminLTE/AdminLTE.css" />
 		<g:layoutHead/>
 	</head>
-	<body>
-		<g:render template="/layouts/header"/>
+	<body class="skin-blue">
+		<header class="header">
+			<g:render template="/layouts/header"/>
+		</header>
 		<div class="wrapper row-offcanvas row-offcanvas-left">
             <!-- Left side column. contains the logo and sidebar -->
             <aside class="left-side sidebar-offcanvas">
@@ -52,7 +50,11 @@
                 </section><!-- /.content -->
             </aside><!-- /.right-side -->
         </div><!-- ./wrapper -->
-
+		<!-- Bootstrap -->
+        <script src="http://cdn.bootcss.com/bootstrap/3.3.1/js/bootstrap.min.js" type="text/javascript"></script>
+        <!-- AdminLTE App -->
+        <asset:javascript src="AdminLTE/app.js" />
+        <asset:javascript src="AdminLTE/dashboard.js" />
 
 	</body>
 </html>
